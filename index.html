@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Franco Rauti</title>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url('background.jpg'); /* sostituisci con il percorso giusto */
+      background-repeat: repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #frase {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 24px;
+      max-width: 80%;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="frase">Clicca per una frase!</div>
+
+  <script>
+    const frasi = [
+      "Parst",
+      "Tino",
+      "Tino è gay",
+      "Pino",
+      "Pino sei gay",
+      "Parst raffo",
+      "Parst Giulio",
+      "Parst Mimmo",
+      "Parst Vito",
+      "Parst tino",
+      "Parst matti",
+      "Parst toni",
+      "Birst",
+      "First",
+      "U cunnu e fratatta",
+      "Andiamo da ponteduro",
+      "Non ho dormito stanotte",
+      "Non mi funzionano le cuffie",
+      "Mannaia dio",
+      "Porco dio",
+      "Sei un coglione raffo",
+      "Sei un coglione matti",
+      "Sei un coglione Mimmo",
+      "Sei un coglione toni",
+      "Sei un coglione giu",
+      "Giulio",
+      "Mio fratello Giulio",
+      "Pinks",
+      "Fissillo",
+      "Sei assai fissillo",
+      "Mamma come sei fissillo tu",
+      "Paderbirst",
+      "Bruges",
+      "Sei un cretino",
+      "Sprughen",
+      "Ponduro"
+    ];
+    document.body.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * frasi.length);
+      document.getElementById('frase').textContent = frasi[randomIndex];
+    });
+  </script>
+</body>
+</html>
